@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="true">
+        <title>graphyl</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
+        <link rel="stylesheet" href="valencia/jquery.mobile.theme.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+        <script src="usergrid.client.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="page5">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    graphyl
+                </h3>
+                <a data-role="button" onclick="App.client.logout();$.mobile.changePage($('#login'));" data-icon="delete">Logout</a>
+            </div>
+            <div data-role="content" id="popular-content">
+            </div>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#page5" data-theme="" data-icon="star" class="ui-btn-active">
+                                Popular
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page3" data-theme="" data-icon="plus">
+                                Playground
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page4" data-theme="" data-icon="grid">
+                                Feed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="page3">
+            <div data-role="header" data-position="fixed">
+                <h3>
+                    graphyl
+                </h3>
+                <a data-role="button" onclick="App.client.logout();$.mobile.changePage($('#login'));" data-icon="delete">Logout</a>
+            </div>
+            <div data-role="content">
+
+                <iframe src="http://graph.tk/" id="playground-graph" class="big-graph" data-output="playground-equations"></iframe>
+                <div id="playground-equations" class="equations">
+                    <center>
+                        <div data-role="controlgroup" data-type="horizontal" class="tools">
+                            <a data-role="button" onclick="App.graphUtils.add('playground-graph','prompt')" data-mini="true">Add</a>
+                            <a data-role="button" onclick="App.graphUtils.center('playground-graph')" data-mini="true">Center</a>
+                            <a data-role="button" onclick="App.graphUtils.empty('playground-graph')" data-mini="true">Empty</a>
+                            <a data-role="button" onclick="App.graphUtils.share(false, prompt('caption'))" data-mini="true">Share</a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#page5" data-theme="" data-icon="star">
+                                Popular
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page3" data-theme="" data-icon="plus" class="ui-btn-active">
+                                Playground
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page4" data-theme="" data-icon="grid">
+                                Feed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="page4">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    graphyl
+                </h3>
+                <a data-role="button" onclick="App.client.logout();$.mobile.changePage($('#login'));" data-icon="delete">Logout</a>
+            </div>
+            <div data-role="content">
+            </div>
+            <div data-theme="a" data-role="footer" data-position="fixed">
+                <div data-role="navbar" data-iconpos="top">
+                    <ul>
+                        <li>
+                            <a href="#page5" data-theme="" data-icon="star">
+                                Popular
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page3" data-theme="" data-icon="plus">
+                                Playground
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#page4" data-theme="" data-icon="grid" class="ui-btn-active">
+                                Feed
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="page" id="login">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    graphyl
+                </h3>
+            </div>
+            <div data-role="content">
+                <h3 style="display:inline-block">Login</h3> or <a href="#register">Register</a>
+                <form id="login_form">
+                    <input type="text" placeholder="username" name="login_email" id="login_email" />
+                    <input type="password" placeholder="password" name="login_password" id="login_password" />
+                    <center><input type="submit" value="submit" data-inline="true" /></center>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="register">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                    graphyl
+                </h3>
+            </div>
+            <div data-role="content">
+                <h3 style="display:inline-block">Register</h3> or <a href="#login">Login</a>
+                <form id="register_form">
+                    <input type="text" placeholder="username" name="register_username" id="register_username" />
+                    <input type="email" placeholder="email" name="register_email" id="register_email" />
+                    <input type="text" placeholder="full name (optional)" name="register_name" id="register_name" />
+                    <input type="password" placeholder="password" name="register_password" id="register_password" />
+                    <center><input type="submit" value="submit" data-inline="true" /></center>
+                </form>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

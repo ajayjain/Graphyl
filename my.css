@@ -1,0 +1,82 @@
+html, body, [data-role="page"] {
+	background-image: url(http://subtlepatterns.com/patterns/purty_wood.png) !important;
+	background-attachment: initial !important;
+	background-origin: initial !important;
+
+	-webkit-background-clip: initial !important;
+	-moz-background-clip: initial !important;
+	background-clip: initial !important;
+	background-position: initial initial !important;
+	background-repeat: initial initial !important;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+.big-graph {
+	display: block;
+	height: 300px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+}
+
+.equations {
+	display: block;
+	margin-left: 5px;
+	margin-right: 5px;
+
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+	-webkit-box-shadow: 0 1px 0 rgba(101, 101, 101, .1);
+	-moz-box-shadow: 0 1px 0 rgba(101, 101, 101, .1);
+	box-shadow: 0 1px 0 rgba(101, 101, 101, .1);
+	background-color: #F8F8F8;
+	border-color: #D5D5D5;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.equation {
+	font-size: 20px;
+	display: block;
+	height: 25px;
+	border-bottom: 1px solid black;
+}
+
+/*.tools {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}*/
+
+
+
+#login input[type="submit"], #register input[type="submit"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.graph-item {
+	display:block;
+	border-radius: 3px;
+	width:100%;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align:center;
+	background-color: #ffffff;
+}
+
+.graph-item iframe {
+	width: 92%;
+	margin-left: auto;
+	margin-right: auto;
+}
