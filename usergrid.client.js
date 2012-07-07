@@ -712,7 +712,7 @@ usergrid.Client = function (applicationId, clientId, clientSecret) {
       username: email,
       password: password
     };
-    apiRequest("POST", "/" + applicationId + "/token?grant_type=password&username=" + email + "&password=" + password, null, null, function (response) {
+    apiRequest("POST", "/" + self.currentOrganization + "/" + applicationId + "/token", formdata, null, function (response) {
       if (response && response.access_token && response.user) {
         self.loggedInUser = response.user;
         self.accessToken = response.access_token;
@@ -890,7 +890,7 @@ usergrid.Client = function (applicationId, clientId, clientSecret) {
   //
 
   function createUser(applicationId, username, fullname, email, password, success, failure) {
-    apiRequest("POST", "/" + applicationId + "/users", null, JSON.stringify({
+    apiRequest("POST", "/" + self.currentOrganization + "/" + applicationId + "/users", null, JSON.stringify({
       username: username,
       name: fullname,
       email: email,
