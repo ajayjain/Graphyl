@@ -9,16 +9,7 @@
         <title>graphyl</title>
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile.structure-1.1.0.min.css" />
         <link rel="stylesheet" href="valencia/jquery.mobile.theme.css" />
-        <link rel="stylesheet" href="my.css" />
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-        </script>
-        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
-        </script>
-        <script src="usergrid.client.js"></script>
-        <script src="app.js"></script>
+        <link rel="stylesheet" href="./css/app.css" />
     </head>
     <body>
         <div data-role="page" id="page5">
@@ -161,8 +152,15 @@
                 </form>
             </div>
         </div>
-        <script>
-            //App custom javascript
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+        <script src="./js/usergrid.client.js"></script>
+        <script type="text/javascript">
+            var App = {};
         </script>
+        <script src="./js/graphUtils.js"></script>
+        <script src="./js/ug.js"></script>
+        <script src="./js/init.js"></script>
     </body>
 </html>

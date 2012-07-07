@@ -1065,12 +1065,3 @@ usergrid.Client = function (applicationId, clientId, clientSecret) {
     }
   }
 };
-
-var client = new usergrid.Client('1e9fcb6d-b1d3-11e1-8b99-1231381c404f','YXA6Hp_LbbHTEeGLmRIxOBxATw','YXA61MF5BhhWL6KjuCMXG12XT-F2x4o');
-client.currentOrganization = 'jainlabs';
-client.createUser("1e9fcb6d-b1d3-11e1-8b99-1231381c404f","sampleuser","user@gmail.com","password",function(p) {
-			console.log('success',p);
-		},
-		function(p) {
-			console.log('failure',p);
-		});
