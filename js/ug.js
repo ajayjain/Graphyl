@@ -1,4 +1,4 @@
-App.client = new usergrid.Client('Graphyl','YXA6Hp_LbbHTEeGLmRIxOBxATw','YXA61MF5BhhWL6KjuCMXG12XT-F2x4o');
+App.client = new usergrid.Client('Graphyl',<CLIENT_ID>,<CLIENT_SECRET>);
 
 App.client.fetchGraphs = function() {
 	window.App.client.apiRequest('GET', '/jainlabs/Graphyl/graphs?filter=points', null, null,
